@@ -71,7 +71,7 @@ public final class Arquivo {
         escreveNoArquivo(conteudo);
     }
 
-    public List<String> lerDoArquivo(String caminhoArquivo) throws Exception {
+    public List<String> lerDoArquivo(String caminhoArquivo) {
         this.caminho = caminhoArquivo;
         lerArquivo();
         return conteudoDoArquivo;
