@@ -41,7 +41,7 @@ public final class ConsumidorWeb {
     public Optional<String> putDados(String endPoint, String json, boolean existeRetorno) {
         this.web = client.resource(endPoint);
         ClientResponse response = this.web.type("application/json").put(ClientResponse.class, json);
-        if (response.getStatus() > 200 || response.getStatus() == 204 ) {
+        if (response.getStatus() == 200 || response.getStatus() == 204 ) {
             if (existeRetorno) {
                 String result = response.getEntity(String.class);
                 return Optional.of(result);
